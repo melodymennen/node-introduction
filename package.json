@@ -1,0 +1,23 @@
+{
+  "name": "introduction",
+  "version": "1.0.0",
+  "description": "intro to node for devmtn",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melodymennen/node-introduction.git"
+  },
+  "author": "Melody Rosado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melodymennen/node-introduction/issues"
+  },
+  "homepage": "https://github.com/melodymennen/node-introduction#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}
