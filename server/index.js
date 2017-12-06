@@ -6,6 +6,7 @@ const bc = require('./controllers/books_controller');
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static( __dirname + '/../public/build'))
 
 app.post('/api/books', bc.create);
 app.get('/api/books', bc.read);
