@@ -15,8 +15,18 @@ module.exports = {
         console.log('books',books);
         res.json(books);
     }
-    // read
-    // update
+    read(req, res) {
+        res.json(books)
+    }
+    update(req, res) {
+        const bookId = req.params.id;
+        const bookIndex = books.findIndex(book => book.id === +bookId);
+        books[bookIndex] = {
+            title: req.body.title,
+            author: req.body.author
+        }
+        res.json(books);
+    }
     delete(req, res) {
         const bookId = req.params.id;
         const bookIndex = books.findIndex(book => book.id === +bookId);
@@ -25,7 +35,3 @@ module.exports = {
     }
 };
 
-
-// app.get('/api/books');
-
-// app.put('/api/books/:id');

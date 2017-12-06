@@ -8,8 +8,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/api/books', bc.create);
-// app.get('/api/books', bc.read);
-// app.put('/api/books/:id', bd.update);
+app.get('/api/books', bc.read);
+app.put('/api/books/:id', bd.update);
 app.delete('/api/books/:id', bc.delete);
 
 
