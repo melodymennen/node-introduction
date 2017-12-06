@@ -1,5 +1,3 @@
-import { read } from "fs";
-
 const books = [];
 let id = 0;
 
@@ -14,10 +12,10 @@ module.exports = {
         id++
         console.log('books',books);
         res.json(books);
-    }
+    },
     read(req, res) {
         res.json(books)
-    }
+    },
     update(req, res) {
         const bookId = req.params.id;
         const bookIndex = books.findIndex(book => book.id === +bookId);
@@ -26,7 +24,7 @@ module.exports = {
             author: req.body.author
         }
         res.json(books);
-    }
+    },
     delete(req, res) {
         const bookId = req.params.id;
         const bookIndex = books.findIndex(book => book.id === +bookId);

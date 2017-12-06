@@ -9,7 +9,7 @@ app.use(cors());
 
 app.post('/api/books', bc.create);
 app.get('/api/books', bc.read);
-app.put('/api/books/:id', bd.update);
+app.put('/api/books/:id', bc.update);
 app.delete('/api/books/:id', bc.delete);
 
 
